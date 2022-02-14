@@ -21,7 +21,7 @@
   --fs-body: 1.125rem;  /* Heading 5  28px*/
 
   /* Character Space */
-  --letter-spacing-1: 3.37rem; /* Heading 5  4.75*/
+  --letter-spacing-1: 0.296em; /* Heading 5  4.75*/
   --letter-spacing-2: 0.147rem; /* Sub Heading 2  2.35*/
   --letter-spacing-nav: 0.17rem; /* Nav  2.7*/
 
@@ -72,6 +72,11 @@ nav {
   color: hsl(var(--clr-white));
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-nav);
+}
+
+p{
+  font-size: var(--fs-body);
+  color: hsl(var(--clr-white));
 }
 
 /* --------------------- */

@@ -1,11 +1,35 @@
 .btn-explore{
+    position: relative;
+    z-index: 1;
     width: 17.1rem;
     height: 17.1rem;
     border-radius: 50%;
     display: grid;
     place-items: center;
+    font-size: var(--fs-h4);
+    letter-spacing: var(--letter-spacing-3);
     color: var(--clr-dark);
     text-transform: uppercase;
     text-decoration: none;
-    background: hsl(var(--clr-light));
+    background: hsl(var(--clr-white));
+}
+
+.btn-explore::after{
+    content: '';
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: hsl(var(--clr-white) /.1 );
+    transition: opacity 500ms linear, transform 750ms ease-in-out;
+}
+
+
+
+.btn-explore:hover::after,
+.btn-explore:focus::after{
+    transform: scale(1.5);
+    opacity: 1;
 }

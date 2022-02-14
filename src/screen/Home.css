@@ -2,4 +2,15 @@
    height: 100vh;
    width: 100vw;
    background: center / cover no-repeat url('../assets/home/background-home-desktop.jpg');
+
+}
+
+.home_box{
+   display: flex;
+   width: 100%;
+   margin: 0 auto;
+}
+
+.home-left{
+   width: 32%;
 }

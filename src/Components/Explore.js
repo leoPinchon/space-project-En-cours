@@ -3,7 +3,7 @@ import "./styles/Explore.css";
 export default function Explore() {
   return (
    
-      <a  href="#" className="btn-explore">Explore</a>
+      <a href="#" className="btn-explore">Explore</a>
     
   );
 }
