@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="home">
       <Navbar />
-      {/* <div className="home_box">
+      <div className="home_box">
         <div className="home-left">
           <h5>SO, YOU WANT TO TRAVEL TO</h5>
           <h1>Space</h1>
@@ -18,8 +18,8 @@ export default function Home() {
             world experience!
           </p>
         </div>
-        <Explore />
-      </div> */}
+        <Explore className="explore"/>
+      </div>
     </div>
   );
 }

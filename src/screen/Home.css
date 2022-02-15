@@ -1,16 +1,74 @@
-.home{
-   height: 100vh;
-   width: 100vw;
-   background: center / cover no-repeat url('../assets/home/background-home-desktop.jpg');
-
+.home {
+  height: 100vh;
+  width: 100vw;
+  background: center / cover no-repeat
+    url("../assets/home/background-home-desktop.jpg");
 }
 
-.home_box{
-   display: flex;
-   width: 100%;
-   margin: 0 auto;
+.home_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 70%;
+  max-width: 1300px;
+  margin: 0 auto;
+  /* padding-top: 20vh; */
+  /* overflow: hidden; */
+  /* padding-bottom: 10vh;  */
+  height: 75vh;
+  min-height: 367px;
 }
 
-.home-left{
-   width: 32%;
+.home-left {
+  max-width: 445px;
+}
+
+/* Format Tablet  */
+@media screen and (max-width: 89rem) {
+  .home {
+    background: center / cover no-repeat
+      url("../assets/home/background-home-tablet.jpg");
+  }
+
+  .home_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* height: 100%; */
+    padding-top: 10vh;
+    /* min-height: 100px; */
+  }
+
+  .home-left{
+     text-align: center;
+   
+
+  } 
+  .home-left p {
+   margin-bottom: 50px;
+  }
+
+  /* Changement de polices */
+  .home-left h5 {
+    font-size: 1.25rem;
+    letter-spacing: 3.38px;
+  }
+
+  .home-left p{
+   font-size: var(--fs-nav);
+   letter-spacing: 3.38px;
+  }
+
+  .explore{
+     padding-top:200px;
+  }
+}
+
+/* Format mobile */
+@media screen and (max-width: 43rem) {
+  .home {
+    background: center / cover no-repeat
+      url("../assets/home/background-home-mobile.jpg");
+  }
 }
