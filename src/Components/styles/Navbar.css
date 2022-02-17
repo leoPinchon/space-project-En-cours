@@ -16,6 +16,10 @@
 
 /* Right Side */
 
+.isBurger {
+  display: none;
+}
+
 /* Blur Bar */
 .primary-nav-box {
   display: flex;
@@ -27,13 +31,26 @@
   backdrop-filter: blur(1rem);
 }
 
+.primary-nav-box-phone{
+  display: none;
+  background-color: hsl(0 0% 100% / 0.1);
+  backdrop-filter: blur(1rem);
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  inset: 0 0 0 100%;
+  top:0 ;
+  opacity: 0;
+  transition: opacity 500ms linear, inset 750ms ease-in-out;
+}
+
 .primary-nav::before {
   content: "";
   position: absolute;
   z-index: 20;
   top: 50%;
   transform: translateY(-50%);
-  left: -50%;
+  left: -52%;
   height: 1px;
   width: 58%;
   background: hsl(var(--clr-white));
@@ -44,23 +61,19 @@
   display: flex;
   align-items: center;
   list-style: none;
-  margin-left: 6%;
+  gap:5vw;
+  margin-left: 7%;
 }
 
 .primary-nav li {
   display: inline-block;
   font-size: var(--fs-nav);
   letter-spacing: var(--letter-spacing-nav);
-  margin-left: 3.5rem;
   padding: 2.4rem 0;
   border-bottom: 2px solid transparent;
   cursor: pointer;
   transition: 0.3s;
 }
-
-/* .primary-nav li:last-child{
-  margin-right: 5%;
-} */
 
 .primary-nav li:hover {
   /* height: 3px; */
@@ -127,25 +140,48 @@
     height: 2em;
     margin: 1.5rem;
   }
+
+  .isBurger {
+    display: block;
+    z-index: 20000;
+    width: 2em;
+    height: 2em;
+    margin: 1.5rem;
+  }
   .primary-nav-box {
+    display: none;
     justify-content: initial;
     align-items: initial;
     position: fixed;
     z-index: 1000;
-    inset: 0 0 0 30%;
     height: 100vh;
   }
 
-  .primary-nav {
+  .isOpen{
+    display: block;
+    inset: 0 0 0 30%;
+    opacity: 1;
+    background-color: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(1rem);
+    /* right: 0; */
+  }
+
+  .primary-nav-box-phone{
+    display: block;
+  
+    
+  }
+
+  .primary-nav-phone {
     flex-direction: column;
-    /* justify-content: cnter; */
     align-items: flex-start;
     padding: min(20vh, 10rem) 2rem;
+    gap:6vh
   }
 
   .primary-nav li {
     margin-left: 0;
-    padding: 1.3rem 0;
+    padding: .5rem 0;
   }
 
   .primary-nav span {
