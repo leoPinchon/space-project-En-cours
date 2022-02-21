@@ -16,7 +16,7 @@
 
 /* Right Side */
 
-.isBurger {
+.nav-burger-toggle {
   display: none;
 }
 
@@ -46,13 +46,13 @@
 
 .primary-nav::before {
   content: "";
-  position: absolute;
-  z-index: 20;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -52%;
-  height: 1px;
   width: 58%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: -55%;
+  transform: translateY(-50%);
+  z-index: 20;
   background: hsl(var(--clr-white));
 }
 
@@ -85,7 +85,7 @@
   border-bottom: 2px solid hsl(var(--clr-white));
 }
 
-.primary-nav li:focus {
+.primary-nav a:focus {
   border-bottom: 2px solid hsl(var(--clr-white));
 }
 .primary-nav span {
@@ -93,7 +93,7 @@
   margin-right: 0.7em;
 }
 
-@media screen and (max-width: 89rem) {
+@media screen and (max-width: 70rem) {
   .header {
     padding-top: 0;
     height: 96px;
@@ -141,13 +141,25 @@
     margin: 1.5rem;
   }
 
-  .isBurger {
+  .nav-burger-toggle {
     display: block;
+    background-color: transparent;
+    border: none;
     z-index: 20000;
-    width: 2em;
-    height: 2em;
+    width: 1.5rem;
+    height: 1.5rem;
     margin: 1.5rem;
   }
+
+  .burger{
+    background-image: url('../../data/assets/shared/icon-hamburger.svg');
+    background-repeat: no-repeat;
+  }
+  .close{
+    background-image: url('../../data/assets/shared/icon-close.svg');
+    background-repeat: no-repeat;
+  }
+
   .primary-nav-box {
     display: none;
     justify-content: initial;
@@ -155,6 +167,11 @@
     position: fixed;
     z-index: 1000;
     height: 100vh;
+  }
+
+  .primary-nav-box img {
+    width: 100%;
+    aspect-ratio: 1;
   }
 
   .isOpen{
@@ -168,9 +185,7 @@
 
   .primary-nav-box-phone{
     display: block;
-  
-    
-  }
+         }
 
   .primary-nav-phone {
     flex-direction: column;

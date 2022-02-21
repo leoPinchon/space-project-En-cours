@@ -1,0 +1,47 @@
+.destination {
+  height: 100vh;
+  width: 100vw;
+  background: center / cover no-repeat
+    url("../data/assets/destination/background-destination-desktop.jpg");
+    
+}
+
+
+/* Mise en Forme de su Sous Titre  */
+.sub-title{
+  display: flex;
+  gap:1.75rem;
+  padding-top: 4.75rem;
+  margin-left: 10vw;
+}
+
+.sub-title span{
+  opacity:.25;
+  font-weight: bold;
+}
+
+
+@media screen and (max-width: 70rem) {
+  .destination {
+    background: center / cover no-repeat
+      url("../data/assets/destination/background-destination-tablet.jpg");
+  }
+
+  .sub-title{
+    padding-top: 2.5rem;
+    gap:.9rem;
+  }
+}
+
+@media screen and (max-width: 43rem) {
+  .destination {
+    background: center / cover no-repeat
+      url("../data/assets/destination/background-destination-mobile.jpg");
+  }
+
+  .sub-title{
+    padding-top: 1.2rem;
+    justify-content: center;
+    margin-left: 0;
+  }
+}
